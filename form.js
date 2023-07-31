@@ -18,6 +18,7 @@ async function sendData(data) {
         const res = await axios.post('https://buzzbackend1.vercel.app/deleteaccount', { ...data })
         console.log(res)
         alert("sorry for not meeting your expectations")
+        
        
        
 
