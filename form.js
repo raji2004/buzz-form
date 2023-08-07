@@ -7,7 +7,11 @@ form.addEventListener('submit', async (e) => {
     const data = Object.fromEntries(formData)
 
     console.log(data)
-    // return sendData(data)
+    const res = await axios.post('https://buzzbackend1.vercel.app/deleteaccount', { ...data })
+    console.log(res)
+    alert("Your account deletion request has been received and is being processed. Please note that account deletion is permanent. If you change your mind, please contact our support team immediately at [buzzappng@gmail.com].Note account will be deleted in 1-3 days.")
+    form.reset()
+    
 
 
 
@@ -15,9 +19,9 @@ form.addEventListener('submit', async (e) => {
 async function sendData(data) {
     try {
 
-        const res = await axios.post('https://buzzbackend1.vercel.app/deleteaccount', { ...data })
+        
         console.log(res)
-        alert("sorry for not meeting your expectations")
+        
         
        
        
